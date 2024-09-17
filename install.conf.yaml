@@ -1,0 +1,15 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+
+- clean: ['~', '~/.config']
+
+- link:
+    ~/.config/nvim:
+      path: nvim
+      force: true
+
+    # ~/.dotfiles: ""
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
