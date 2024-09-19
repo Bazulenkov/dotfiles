@@ -8,11 +8,14 @@
 - link:
     ~/.config/nvim:
       path: nvim
-      force: true
+      # force: true
+    ~/.config/pypoetry/config.toml:
+      path: pypoetry/config.toml
 
     # ~/.dotfiles: ""
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
     #- [curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim, Installing vim-plug]
   - [/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)", Installing JetBrainsMono font]
-
+    # Don't idempotent
+  # - [poetry completions bash >> ~/.bash_completion, Enable tab competition for Bash]
