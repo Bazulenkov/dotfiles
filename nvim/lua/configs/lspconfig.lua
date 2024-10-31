@@ -1,23 +1,22 @@
 -- load defaults i.e lua_lsp
 require("nvchad.configs.lspconfig").defaults()
 
-
 local servers = {
-  html = {},
-  cssls = {},
+  -- html = {},
+  -- cssls = {},
   pylsp = {
     settings = {
       pylsp = {
         plugins = {
           pycodestyle = {
-            -- ignore = {'W391'},
+            ignore = { "W391" },
             maxLineLength = 88,
           },
         },
       },
     },
   },
-  ruff = {},
+  -- ruff = {},
 }
 
 local nvlsp = require "nvchad.configs.lspconfig"
