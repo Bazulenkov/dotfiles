@@ -6,9 +6,11 @@ Personal dotfiles for Arch Linux, managed with [GNU Stow](https://www.gnu.org/so
 
 | Package | Contents |
 |---------|----------|
-| `zsh`   | `.zshrc` |
+| `zsh`   | `.zshenv`, `.zshrc` |
 | `git`   | `.config/git/config` |
 | `hypr`  | `.config/hypr/hyprland.conf` |
+| `zed`   | `.config/zed/` |
+| `uv`    | `.config/uv/uv.toml` |
 
 ## Dependencies
 
@@ -24,7 +26,7 @@ git clone git@github.com:bazulenkov/dotfiles.git ~/dotfiles
 
 # Apply all packages
 cd ~/dotfiles
-stow zsh git hypr
+stow zsh git hypr zed uv
 ```
 
 ## Arch Linux Setup Script
