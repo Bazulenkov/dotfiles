@@ -11,11 +11,16 @@ Personal dotfiles for Arch Linux, managed with [GNU Stow](https://www.gnu.org/so
 | `hypr`  | `.config/hypr/hyprland.conf` |
 | `zed`   | `.config/zed/` |
 | `uv`    | `.config/uv/uv.toml` |
+| `waybar`| `.config/waybar/` |
 
 ## Dependencies
 
 ```bash
-sudo pacman -S stow git zsh eza bat dust procs git-delta zoxide starship zsh-autosuggestions zsh-syntax-highlighting
+sudo pacman -S stow git zed uv \
+    zsh zsh-autosuggestions zsh-syntax-highlighting \
+    eza bat dust procs git-delta zoxide starship \
+    hyprland xdg-desktop-portal-hyprland \
+    kitty wofi waybar
 ```
 
 ## Setup
@@ -26,7 +31,7 @@ git clone git@github.com:bazulenkov/dotfiles.git ~/dotfiles
 
 # Apply all packages
 cd ~/dotfiles
-stow zsh git hypr zed uv
+stow zsh git hypr zed uv waybar
 ```
 
 ## Arch Linux Setup Script
